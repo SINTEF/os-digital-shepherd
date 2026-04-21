@@ -1,6 +1,6 @@
 # RESIST Digital Shepherd - Open Source UI
 
-A beautiful, interactive onboarding and information platform built with **React + TypeScript + Vite**. This open-source UI guides users through climate adaptation data preparation, regional analysis, and integration with digital twin technologies for the RESIST EU project.
+An interactive onboarding and information platform built with **React + TypeScript + Vite**. This open-source UI guides users through climate adaptation data preparation, regional analysis, and integration with digital twin technologies for the RESIST EU project.
 
 **Status**: Fully functional demo application with static data—no external dependencies required.
 
@@ -36,8 +36,8 @@ A beautiful, interactive onboarding and information platform built with **React 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/resist-project/OS-DigitalShepherd.git
-   cd OS-DigitalShepherd
+   git clone https://github.com/SINTEF/os-digital-shepherd.git
+   cd os-digital-shepherd
    ```
 
 2. **Install dependencies**:
@@ -147,7 +147,9 @@ const MyStep: React.FC<StepProps> = ({ setStep, selectedOption, setSelectedOptio
 
 ## About RESIST
 
-The **RESIST project** (EU Horizon Europe) develops adaptive governance tools and technologies to help European regions respond to climate challenges. This Digital Shepherd UI is part of the digital twin ecosystem for climate risk assessment.
+The **RESIST project** develops adaptive governance tools and technologies to help European regions respond to climate challenges. This Digital Shepherd UI is part of the digital twin ecosystem for climate risk assessment.
+
+The **RESIST project** is funded by EU Horizon Europe, Grant agreement ID: 101093968.
 
 **More info**: [resist-project.eu](https://resist-project.eu)
 
@@ -161,8 +163,6 @@ Contributions are welcome! Please feel free to submit issues and pull requests.
 
 ## Support
 
-For issues, questions, or feedback, please open a GitHub issue or contact the RESIST project team at [resist-project.eu](https://resist-project.eu).
+For issues, questions, or feedback, please open a GitHub issue or contact costas [at] sintef.no.
 
 ---
-
-**Built with ❤️ for the RESIST Project**
