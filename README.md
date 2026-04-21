@@ -51,7 +51,7 @@ An interactive onboarding and information platform built with **React + TypeScri
    ```
 
 4. **Open in browser**:
-   Visit `http://localhost:5173` and log in with:
+   Visit `http://localhost:5173/demo/shepherd/` and log in with:
    - **Username**: `admin`
    - **Password**: `demo`
 
@@ -102,12 +102,14 @@ public/
 
 ## Available Scripts
 
-- `npm run dev` - Start development server (http://localhost:5173)
+- `npm run dev` - Start development server (http://localhost:5173/demo/shepherd/)
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint
 
 ## Demo Features
+
+https://resist.hcilab.no/demo/shepherd/
 
 ### Authentication
 - **Credentials**: admin / demo

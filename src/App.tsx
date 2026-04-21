@@ -115,7 +115,7 @@ function App() {
   const [isModal2Open, setIsModal2Open] = useState<boolean>(false);
   const [updateLog, setUpdateLog] = useState("");
     useEffect(() => {
-      fetch("/shepherd/update-log.html")
+      fetch(`${import.meta.env.BASE_URL}update-log.html`)
         .then(r => r.text())
         .then(setUpdateLog);
     }, []);
@@ -129,9 +129,9 @@ function App() {
 
   useEffect(() => {
     if (!loggedIn && !storedUsername) {
-      navigate("/shepherd/login");
+      navigate("/login");
     } else {
-      navigate("/shepherd/");
+      navigate("/");
     }
   }, [loggedIn]);
 
@@ -143,7 +143,7 @@ function App() {
     setIsModal2Open(!isModal2Open);
   };
 
-  const isLoginPage = location.pathname === "/shepherd/login";
+  const isLoginPage = location.pathname === "/login";
 
   const LoginPageInline: React.FC<{ loggedIn: boolean; setLoginFunction: (value: boolean) => void }> = ({ loggedIn, setLoginFunction }) => {
     const { setUserName, setUserId } = selections;
@@ -228,7 +228,7 @@ function App() {
     sessionStorage.removeItem("username");
     setUserName("");
     setLoggedIn(false);
-    navigate("/shepherd/login");
+    navigate("/login");
   }
 
 
@@ -339,7 +339,7 @@ useEffect(() => {
         <div className="flex flex-row justify-between">
           <div className="text-start">
             <img
-              src="/shepherd/RESIST_logo.png"
+              src={`${import.meta.env.BASE_URL}RESIST_logo.png`}
               alt="RESIST logo"
               className="h-[7rem]"
             />
@@ -353,7 +353,7 @@ useEffect(() => {
                 target="_blank"
               >
                 <img
-                  src="/shepherd/EU_logo.png"
+                  src={`${import.meta.env.BASE_URL}EU_logo.png`}
                   alt="EU Logo"
                   className="h-10 mx-auto mt-8"
                 />
@@ -428,13 +428,13 @@ useEffect(() => {
 
           <Routes>
             <Route
-              path="shepherd/login"
+              path="login"
                 element={
                   <LoginPageInline loggedIn={loggedIn} setLoginFunction={setLoggedIn} />
                 }
             />
             <Route
-              path="shepherd/"
+              path="/"
               element={
                 <div className="flex flex-col justify-center gap-20">
                     <SelectingFormInline />
@@ -460,7 +460,7 @@ useEffect(() => {
               target="_blank"
             >
               <img
-                src="/shepherd/EU_logo.png"
+                src={`${import.meta.env.BASE_URL}EU_logo.png`}
                 alt="EU Logo"
                 className="h-10 mx-auto mt-2"
               />

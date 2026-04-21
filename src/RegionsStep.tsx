@@ -12,12 +12,13 @@ const UserStep: React.FC<UserStepProps> = observer((props) => {
 
   const apiRegionName = (localStorage.getItem("name") || "").toLowerCase();
 
+  const base = import.meta.env.BASE_URL;
   const items = [
-    { id: 1,  name: "Region1",  country: "RE", img: "/shepherd/regions/region1.jpg",  risks: "Floods, Droughts", pdf: "/shepherd/regions/poster.pdf" },
-    { id: 2,  name: "Region2",  country: "EL", img: "/shepherd/regions/region2.jpg",  risks: "Floods, Droughts", pdf: "/shepherd/regions/poster.pdf" },
-    { id: 3,  name: "Region3",  country: "FR", img: "/shepherd/regions/region3.jpg",  risks: "Floods, Soil Erosion", pdf: "/shepherd/regions/poster.pdf" },
-    { id: 4,  name: "Region4",  country: "FI", img: "/shepherd/regions/region4.jpg",  risks: "Floods, Droughts, Heatwaves", pdf: "/shepherd/regions/poster.pdf" },
-    { id: 5,  name: "Region5",  country: "NO", img: "/shepherd/regions/region5.jpg",  risks: "Floods, Heatwaves", pdf: "/shepherd/regions/poster.pdf" },
+    { id: 1,  name: "Region1",  country: "RE", img: `${base}regions/region1.jpg`,  risks: "Floods, Droughts", pdf: `${base}regions/poster.pdf` },
+    { id: 2,  name: "Region2",  country: "EL", img: `${base}regions/region2.jpg`,  risks: "Floods, Droughts", pdf: `${base}regions/poster.pdf` },
+    { id: 3,  name: "Region3",  country: "FR", img: `${base}regions/region3.jpg`,  risks: "Floods, Soil Erosion", pdf: `${base}regions/poster.pdf` },
+    { id: 4,  name: "Region4",  country: "FI", img: `${base}regions/region4.jpg`,  risks: "Floods, Droughts, Heatwaves", pdf: `${base}regions/poster.pdf` },
+    { id: 5,  name: "Region5",  country: "NO", img: `${base}regions/region5.jpg`,  risks: "Floods, Heatwaves", pdf: `${base}regions/poster.pdf` },
   ];
 
   return (

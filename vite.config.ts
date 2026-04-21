@@ -13,16 +13,12 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
-
-  // Use environment variables for base and server configuration
-  base: "/shepherd/",
-
-  // Variables for running a devcontainer, shouldn't break host development
+  base: "/demo/shepherd/",
   server: {
     watch: {
       usePolling: true,
     },
-    host: "0.0.0.0", // Host based on .env or default
+    host: "0.0.0.0",
     port: 5173,
   },
 });
